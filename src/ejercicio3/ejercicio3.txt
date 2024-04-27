@@ -1,0 +1,42 @@
+Titular
+    - DNI: String
+    - nombre: String
+    - apellidos: String
+    - telefono: String
+
+CuentaBancaria
+    - numeroCuenta: int
+    - saldo: float
+    - titulares[]: Titular[3]
+
+    + getSaldo(): float
+    + setSaldo(float saldo)
+
+    + ingresar(int cantidad)
+    + retirar(int cantidad)
+    + añadirTitular(Titular t)
+    + retirarTituar(Titular t)
+
+    + CuentaBancaria(numeroCuenta, saldo, {titular,...})
+
+CuentaAhorro extends CuentaBancaria
+    - cuoteMantenimineto: float
+    - interesAnual: float
+
+    + calcularSaldoConInteres(): float
+    + cobrarCuotaMantenimineto()
+
+CuentaCorriente extends CuentaBancaria
+    - porcentajePorTransaccion: float
+    - contadorTransacciones: int
+    - historial[]: Transaccion[]
+
+    + transaccion(CuentaCorriente cc, Transaccion t)
+    + movimiento(float cantidad)
+
+Transaccion
+    - dia: int
+    - mes: int
+    - año: int
+    - concepto: String
+    - importe: float

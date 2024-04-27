@@ -1,0 +1,50 @@
+Bibliotecha
+    - fichas[] : Ficha
+
+    + addLibro()
+    + removeLibro()
+    + prestarLibro()
+    + devolverLibro()
+
+abstract Ficha
+    - ID: int
+    - titulo: String
+
+    + getID(): int
+    + getTitulo(): String
+
+    + abstract prestart()
+
+Libro extends Ficha
+    - autor: String
+    - editorial: String
+
+    + getAutor(): String
+    + getEditorial(): String
+
+    + @override prestar()
+
+Revista extends Ficha
+    - numeroRevista: int
+    - publicationYear: int
+
+    + getNumeroRevista(): int
+    + setNumeroRevista()
+    + getPublicationYear(): int
+    + setPublicationYear()
+
+    + @override prestar()
+
+DVD extends Ficha
+    - director: String
+    - year: int
+    - tipo : Tipo {PELICULA, DOCUMENTAL, SERIE}
+
+    + getDirector(): String
+    + getYear(): int
+    + getTIpo: Tipo
+    + setDirector()
+    + setYear()
+    + setTipo()
+
+    + @override prestar()

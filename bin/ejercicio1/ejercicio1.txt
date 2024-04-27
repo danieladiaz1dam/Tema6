@@ -1,0 +1,39 @@
+Vehiculo
+	- marca : String
+	- modelo : String
+	- color : String
+	- matricula : String
+	- encendido : boolean
+	- marcha : int
+	- velocidad : float
+	-----------------------------
+	+ Vehiculo(marca, modelo, color, matricula)
+
+	+ setEncendido()
+	+ getEncendido() : boolean
+	+ getMarcha() : int
+	+ setMarcha()
+	+ getVelocidad() : int
+	+ setVelocidad()
+
+	+ parar() : void
+	+ arrancar() : void
+	- subirMarcha() : void
+	- bajarMarcha() : void
+	+ acelerar()
+	+ frenar()
+
+
+Turismo extends Vehiculo
+	- numeroPlazas : int
+	- tipoUso : Enum Tipo (PARTICULAR, PROFESIONAL)
+
+
+Camion extends Vehiculo
+	- pesoMaximo : float
+	- mercanciaPeligrosa : boolean
+
+
+Motocicleta extends Vehiculo
+	- cilindrada : int
+	- requiresCarnet() : boolean
